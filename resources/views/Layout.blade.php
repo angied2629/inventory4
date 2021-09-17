@@ -92,7 +92,7 @@
             </a>
             </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/categories">
+            <a class="nav-link active" aria-current="page" href="/category">
               <span data-feather="shopping-cart"></span>
              Categories
             </a>
