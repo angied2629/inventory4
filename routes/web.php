@@ -5,6 +5,7 @@ use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoriController;
+use App\Http\Controllers\InvoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,9 +59,22 @@ Route::post('/brand/save', [BrandController::class, 'save'])->name('brand.save')
 Route::get('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 
 Route::get('/brand/delete/{id}', [BrandController::class, 'delete'])->name('brand.delete');
+//-------------------------------------------------------------------------------------//
 
+Route::get('/invoices',[InvoiceController::class, 'show']);
+Route::get('/invoice/form',[InvoiceController::class, 'form'])->name('invoice.form');
 
-
+//---------------------------------------------------------------------------------------//
+//Route::resource('invoice',InvoiceController);
+/*
+get/invoice->index
+get/invoice/create->create
+post/invoice->store
+get/invoice/{invoice}->show
+get/invoice{invoice}edit->edit
+put/path/invoice/{invoice}->update
+delete/invoice/{invoice}->destroy 
+*/
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
